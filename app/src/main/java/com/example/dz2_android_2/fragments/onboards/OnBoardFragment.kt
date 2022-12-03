@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.onboard
+package com.example.dz2_android_2.fragments.onboards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dz2_android_2.R
-import com.example.dz2_android_2.adapters.OnBoardViewPagerAdapter
+import com.example.dz2_android_2.adapter.OnBoardViewPagerAdapter
 import com.example.dz2_android_2.databinding.FragmentOnBoardBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -38,9 +38,9 @@ class OnBoardFragment : Fragment() {
     }
 
     private fun clickHome() {
-       binding.btnHome.setOnClickListener{
-           findNavController().navigate(R.id.action_onBoardFragment_to_homeFragment2)
-       }
+        binding.btnHome.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardFragment_to_homeFragment2)
+        }
     }
 
     private fun initialize() {
@@ -56,7 +56,7 @@ class OnBoardFragment : Fragment() {
     }
 
     private fun onPage() = with(binding) {
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 when (position) {
                     0 -> {

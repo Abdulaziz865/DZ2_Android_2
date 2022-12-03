@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.onboard
+package com.example.dz2_android_2.fragments.onboards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.dz2_android_2.R
 import com.example.dz2_android_2.databinding.FragmentOnBoardPagingBinding
 
@@ -26,7 +25,6 @@ class OnBoardPagingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initialize()
-//        clickButton()
     }
 
     private fun initialize() = with(binding) {
@@ -45,8 +43,6 @@ class OnBoardPagingFragment : Fragment() {
             }
         }
     }
-
-
 
     companion object {
         const val ARG_ONBOARD_POSITION = "onBoard"

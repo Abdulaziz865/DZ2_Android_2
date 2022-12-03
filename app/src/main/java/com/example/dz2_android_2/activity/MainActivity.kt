@@ -1,7 +1,7 @@
 package com.example.dz2_android_2.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dz2_android_2.R
 
 class MainActivity : AppCompatActivity() {
