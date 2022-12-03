@@ -9,13 +9,18 @@
         android:id="@+id/onBoardFragment"
         android:name="com.example.dz2_android_2.fragments.onboard.OnBoardFragment"
         android:label="fragment_on_board"
-        tools:layout="@layout/fragment_on_board" />
+        tools:layout="@layout/fragment_on_board" >
+        <action
+            android:id="@+id/action_onBoardFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/onBoardPagingFragment"
         android:name="com.example.dz2_android_2.fragments.onboard.OnBoardPagingFragment"
         android:label="fragment_on_board_paging"
-        tools:layout="@layout/fragment_on_board_paging" />
+        tools:layout="@layout/fragment_on_board_paging" >
+    </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
