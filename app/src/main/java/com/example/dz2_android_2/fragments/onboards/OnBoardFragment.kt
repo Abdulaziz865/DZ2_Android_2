@@ -29,25 +29,21 @@ class OnBoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initialize()
-        clickButton()
+        setUpListener()
+        onPage()
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ ->
             //Some implementation
         }.attach()
-        onPage()
-        clickHome()
-    }
-
-    private fun clickHome() {
-        binding.btnHome.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardFragment_to_homeFragment2)
-        }
     }
 
     private fun initialize() {
         binding.viewPager.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
     }
 
-    private fun clickButton() = with(binding.viewPager) {
+    private fun setUpListener() = with(binding.viewPager) {
+        binding.btnHome.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardFragment_to_homeFragment2)
+        }
         binding.btnNext.setOnClickListener {
             if (currentItem < 2) {
                 setCurrentItem(currentItem + 1, true)
