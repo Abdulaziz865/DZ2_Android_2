@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.dz2_android_2.R
 import com.example.dz2_android_2.databinding.FragmentOnBoardPagingBinding
 

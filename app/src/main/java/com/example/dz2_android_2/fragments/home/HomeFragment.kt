@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.dz2_android_2.databinding.FragmentHomeBinding
+import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
 
 class HomeFragment : Fragment() {
 
@@ -18,5 +20,16 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        backStackInfo()
+    }
+
+    private fun backStackInfo() {
+        if (!SharedPreferenceUtil.isPreference) {
+            findNavController().popBackStack()
+        }
     }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/onBoardFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -19,12 +19,12 @@
         android:id="@+id/onBoardPagingFragment"
         android:name="com.example.dz2_android_2.fragments.onboards.OnBoardPagingFragment"
         android:label="fragment_on_board_paging"
-        tools:layout="@layout/fragment_on_board_paging"></fragment>
+        tools:layout="@layout/fragment_on_board_paging">
+    </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dz2_android_2.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-
 </navigation>
