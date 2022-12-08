@@ -12,9 +12,7 @@
         tools:layout="@layout/fragment_on_board">
         <action
             android:id="@+id/action_onBoardFragment_to_homeFragment2"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@navigation/nav_graph"
-            app:popUpToInclusive="true"/>
+            app:destination="@id/homeFragment"/>
     </fragment>
 
     <fragment

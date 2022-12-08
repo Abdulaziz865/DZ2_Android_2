@@ -35,11 +35,11 @@ class OnBoardFragment : Fragment() {
             //Some implementation
         }.attach()
         onPage()
+        onSaveCash()
     }
 
     private fun initialize() {
         binding.viewPager.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
-        SharedPreferenceUtil.units(requireContext())
     }
 
     private fun setUpListener() = with(binding.viewPager) {
@@ -73,5 +73,13 @@ class OnBoardFragment : Fragment() {
                 super.onPageSelected(position)
             }
         })
+    }
+
+    private fun onSaveCash() {
+        if (SharedPreferenceUtil.isPreference) {
+            SharedPreferenceUtil.isPreference = false
+        } else {
+            findNavController().navigateUp()
+        }
     }
 }
