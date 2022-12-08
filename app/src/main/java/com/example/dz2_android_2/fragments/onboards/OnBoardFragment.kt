@@ -31,10 +31,10 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setUpListener()
+        onPage()
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ ->
             //Some implementation
         }.attach()
-        onPage()
         onSaveCash()
     }
 
