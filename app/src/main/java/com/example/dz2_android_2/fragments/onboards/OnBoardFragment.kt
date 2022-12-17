@@ -34,6 +34,7 @@ class OnBoardFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ ->
             //Some implementation
         }.attach()
+        onSaveCash()
     }
 
     private fun initialize() {
@@ -73,5 +74,11 @@ class OnBoardFragment : Fragment() {
         })
     }
 
-
+    private fun onSaveCash() {
+        if (SharedPreferenceUtil.isPreference) {
+            SharedPreferenceUtil.isPreference = false
+        } else {
+            findNavController().navigateUp()
+        }
+    }
 }

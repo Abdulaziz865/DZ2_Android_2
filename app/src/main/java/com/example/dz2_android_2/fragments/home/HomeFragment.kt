@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dz2_android_2.App
 import com.example.dz2_android_2.adapter.NoteRecyclerAdapter
 import com.example.dz2_android_2.databinding.FragmentHomeBinding
+import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
 import com.example.dz2_android_2.model.RecyclerModel
 
 class HomeFragment : Fragment() {
@@ -31,9 +32,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+//      backStackInfo()
         initialize()
         setUpClickListener()
         getData()
+    }
+
+    private fun backStackInfo() {
+        if (!SharedPreferenceUtil.isPreference) {
+            findNavController().popBackStack()
+        }
     }
 
     private fun initialize() {
