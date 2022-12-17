@@ -1,7 +1,5 @@
 package com.example.dz2_android_2.fragments.home
 
-import android.graphics.drawable.ClipDrawable.HORIZONTAL
-import android.graphics.drawable.ClipDrawable.VERTICAL
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.dz2_android_2.App
 import com.example.dz2_android_2.adapter.NoteRecyclerAdapter
 import com.example.dz2_android_2.databinding.FragmentHomeBinding
-import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
 import com.example.dz2_android_2.model.RecyclerModel
 
 class HomeFragment : Fragment() {
@@ -35,16 +31,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//      backStackInfo()
         initialize()
         setUpClickListener()
         getData()
-    }
-
-    private fun backStackInfo() {
-        if (!SharedPreferenceUtil.isPreference) {
-            findNavController().popBackStack()
-        }
     }
 
     private fun initialize() {
