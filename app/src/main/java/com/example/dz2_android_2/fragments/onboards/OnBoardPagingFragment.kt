@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.dz2_android_2.R
 import com.example.dz2_android_2.databinding.FragmentOnBoardPagingBinding
 
@@ -15,8 +14,7 @@ class OnBoardPagingFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardPagingBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentOnBoardPagingBinding.inflate(inflater, container, false)

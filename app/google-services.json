@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952708498248",
+    "project_id": "dz2-android-2-c191c",
+    "storage_bucket": "dz2-android-2-c191c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952708498248:android:5b7cbfa75c54727425a97d",
+        "android_client_info": {
+          "package_name": "com.example.dz2_android_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952708498248-6dviiupif3li10obne9pg7m2700lo5u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIZKlRGf02A-VuzfXmjYdLBsDW2NIaWCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952708498248-6dviiupif3li10obne9pg7m2700lo5u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

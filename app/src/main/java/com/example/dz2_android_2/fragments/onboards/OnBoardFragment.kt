@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dz2_android_2.R
-import com.example.dz2_android_2.adapter.OnBoardViewPagerAdapter
+import com.example.dz2_android_2.adapter.NoteViewPagerAdapter
 import com.example.dz2_android_2.databinding.FragmentOnBoardBinding
 import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
 import com.google.android.material.tabs.TabLayoutMediator
@@ -19,8 +19,7 @@ class OnBoardFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentOnBoardBinding.inflate(inflater, container, false)
@@ -35,16 +34,16 @@ class OnBoardFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ ->
             //Some implementation
         }.attach()
-        onSaveCash()
+//        onSaveCash()
     }
 
     private fun initialize() {
-        binding.viewPager.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
+        binding.viewPager.adapter = NoteViewPagerAdapter(this@OnBoardFragment)
     }
 
     private fun setUpListener() = with(binding.viewPager) {
         binding.btnHome.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardFragment_to_homeFragment2)
+            findNavController().navigate(R.id.action_onBoardFragment_to_signUpFragment)
         }
         binding.btnNext.setOnClickListener {
             if (currentItem < 2) {
@@ -75,11 +74,11 @@ class OnBoardFragment : Fragment() {
         })
     }
 
-    private fun onSaveCash() {
-        if (SharedPreferenceUtil.isPreference) {
-            SharedPreferenceUtil.isPreference = false
-        } else {
-            findNavController().navigateUp()
-        }
-    }
+//    private fun onSaveCash() {
+//        if (SharedPreferenceUtil.isPreference) {
+//            SharedPreferenceUtil.isPreference = false
+//        } else {
+//            findNavController().navigateUp()
+//        }
+//    }
 }

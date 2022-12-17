@@ -10,9 +10,10 @@
         android:name="com.example.dz2_android_2.fragments.onboards.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board">
+
         <action
-            android:id="@+id/action_onBoardFragment_to_homeFragment2"
-            app:destination="@id/homeFragment"/>
+            android:id="@+id/action_onBoardFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
     </fragment>
 
     <fragment
@@ -20,11 +21,40 @@
         android:name="com.example.dz2_android_2.fragments.onboards.OnBoardPagingFragment"
         android:label="fragment_on_board_paging"
         tools:layout="@layout/fragment_on_board_paging">
+
     </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dz2_android_2.fragments.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.dz2_android_2.fragments.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="model"
+            android:defaultValue="@null"
+            app:argType="com.example.dz2_android_2.model.RecyclerModel"
+            app:nullable="true" />
+        <argument
+            android:name="isUpdate"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.dz2_android_2.fragments.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

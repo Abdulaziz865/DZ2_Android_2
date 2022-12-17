@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:text="FIFA is not a sports. It's a feeling."
+        android:text="@string/fifa_one"
         android:textColor="#F3F3F3"
         android:textSize="20sp" />
 
