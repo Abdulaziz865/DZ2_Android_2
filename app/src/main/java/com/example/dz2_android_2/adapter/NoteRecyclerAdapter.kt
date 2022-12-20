@@ -42,5 +42,7 @@ class NoteRecyclerAdapter(private val clickListener: ((RecyclerModel) -> Unit?)?
         holder.onBind(list[position])
     }
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount(): Int {
+        return list.size
+    }
 }
