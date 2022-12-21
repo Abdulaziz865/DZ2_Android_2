@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.util
+package com.example.dz2_android_2.util
 
 import android.content.Context
 import android.content.SharedPreferences

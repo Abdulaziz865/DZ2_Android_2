@@ -1,13 +1,13 @@
-package com.example.dz2_android_2.adapter
+package com.example.dz2_android_2.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dz2_android_2.databinding.ItemTextBinding
-import com.example.dz2_android_2.model.RecyclerModel
+import com.example.dz2_android_2.ui.model.RecyclerModel
 
-class NoteRecyclerAdapter(private val clickListener: ((RecyclerModel) -> Unit?)? = null) :
-    RecyclerView.Adapter<NoteRecyclerAdapter.ViewHolder>() {
+class NoteAdapter(private val clickListener: ((RecyclerModel) -> Unit?)? = null) :
+    RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
 
     private var list: List<RecyclerModel> = ArrayList()
 

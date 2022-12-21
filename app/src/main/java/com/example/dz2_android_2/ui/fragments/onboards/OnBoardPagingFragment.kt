@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.onboards
+package com.example.dz2_android_2.ui.fragments.onboards
 
 import android.os.Bundle
 import android.view.LayoutInflater

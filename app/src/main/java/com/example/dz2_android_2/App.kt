@@ -3,8 +3,8 @@ package com.example.dz2_android_2
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import com.example.dz2_android_2.data.db.AppDataBase
-import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
+import com.example.dz2_android_2.ui.data.db.AppDataBase
+import com.example.dz2_android_2.util.SharedPreferenceUtil
 
 class App : Application() {
 

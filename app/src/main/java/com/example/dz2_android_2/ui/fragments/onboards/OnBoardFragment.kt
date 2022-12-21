@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.onboards
+package com.example.dz2_android_2.ui.fragments.onboards
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dz2_android_2.R
-import com.example.dz2_android_2.adapter.NoteViewPagerAdapter
+import com.example.dz2_android_2.ui.adapter.NoteViewPagerAdapter
 import com.example.dz2_android_2.databinding.FragmentOnBoardBinding
-import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
+import com.example.dz2_android_2.util.SharedPreferenceUtil
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardFragment : Fragment() {

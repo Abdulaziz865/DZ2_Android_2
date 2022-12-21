@@ -1,9 +1,9 @@
-package com.example.dz2_android_2.adapter
+package com.example.dz2_android_2.ui.adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.dz2_android_2.fragments.onboards.OnBoardPagingFragment
+import com.example.dz2_android_2.ui.fragments.onboards.OnBoardPagingFragment
 
 class NoteViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 

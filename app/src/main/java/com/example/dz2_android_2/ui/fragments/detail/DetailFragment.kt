@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.detail
+package com.example.dz2_android_2.ui.fragments.detail
 
 import android.os.Build
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.dz2_android_2.App
 import com.example.dz2_android_2.databinding.FragmentDetailBinding
-import com.example.dz2_android_2.model.RecyclerModel
+import com.example.dz2_android_2.ui.model.RecyclerModel
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 

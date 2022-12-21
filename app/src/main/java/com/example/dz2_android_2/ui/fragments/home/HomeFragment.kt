@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.home
+package com.example.dz2_android_2.ui.fragments.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,15 +11,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dz2_android_2.App
-import com.example.dz2_android_2.adapter.NoteRecyclerAdapter
+import com.example.dz2_android_2.ui.adapter.NoteAdapter
 import com.example.dz2_android_2.databinding.FragmentHomeBinding
-import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
-import com.example.dz2_android_2.model.RecyclerModel
+import com.example.dz2_android_2.ui.model.RecyclerModel
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private var noteAdapter = NoteRecyclerAdapter()
+    private var noteAdapter = NoteAdapter()
     private var list: ArrayList<RecyclerModel> = ArrayList()
 
     override fun onCreateView(
@@ -32,20 +31,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//      backStackInfo()
         initialize()
         setUpClickListener()
         getData()
     }
 
-    private fun backStackInfo() {
-        if (!SharedPreferenceUtil.isPreference) {
-            findNavController().popBackStack()
-        }
-    }
-
     private fun initialize() {
-        noteAdapter = NoteRecyclerAdapter(this::onClickListener)
+        noteAdapter = NoteAdapter(this::onClickListener)
         binding.rvListOfText.apply{
             adapter = noteAdapter }
     }

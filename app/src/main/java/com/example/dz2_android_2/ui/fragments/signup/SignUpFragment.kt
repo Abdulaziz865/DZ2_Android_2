@@ -1,4 +1,4 @@
-package com.example.dz2_android_2.fragments.signup
+package com.example.dz2_android_2.ui.fragments.signup
 
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.dz2_android_2.R
 import com.example.dz2_android_2.databinding.FragmentSignUpBinding
-import com.example.dz2_android_2.fragments.util.SharedPreferenceUtil
+import com.example.dz2_android_2.util.SharedPreferenceUtil
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
