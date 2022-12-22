@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dz2_android_2.databinding.ItemTextBinding
 import com.example.dz2_android_2.ui.model.RecyclerModel
 
-class NoteAdapter(private val clickListener: ((RecyclerModel) -> Unit?)? = null) :
-    RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
+class RecyclerAdapter(private val clickListener: ((RecyclerModel) -> Unit?)? = null) :
+    RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     private var list: List<RecyclerModel> = ArrayList()
 

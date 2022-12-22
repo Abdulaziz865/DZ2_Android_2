@@ -11,14 +11,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dz2_android_2.App
-import com.example.dz2_android_2.ui.adapter.NoteAdapter
+import com.example.dz2_android_2.R
+import com.example.dz2_android_2.ui.adapter.RecyclerAdapter
 import com.example.dz2_android_2.databinding.FragmentHomeBinding
 import com.example.dz2_android_2.ui.model.RecyclerModel
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private var noteAdapter = NoteAdapter()
+    private var recyclerAdapter = RecyclerAdapter()
     private var list: ArrayList<RecyclerModel> = ArrayList()
 
     override fun onCreateView(
@@ -37,9 +38,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun initialize() {
-        noteAdapter = NoteAdapter(this::onClickListener)
+        recyclerAdapter = RecyclerAdapter(this::onClickListener)
         binding.rvListOfText.apply{
-            adapter = noteAdapter }
+            adapter = recyclerAdapter }
     }
 
     private fun setUpClickListener() = with(binding) {
@@ -60,6 +61,9 @@ class HomeFragment : Fragment() {
             viewLinearManager.isInvisible = true
             viewGridManager.isVisible = true
         }
+        chatReplace.setOnClickListener {
+            findNavController().navigate(R.id.chatFragment)
+        }
     }
 
     private fun onClickListener(model: RecyclerModel) {
@@ -72,7 +76,7 @@ class HomeFragment : Fragment() {
 
     private fun getData() {
         App.getInstance()?.noteDao()?.getAll()?.observe(viewLifecycleOwner) {
-            noteAdapter.setList(it)
+            recyclerAdapter.setList(it)
         }
     }
 

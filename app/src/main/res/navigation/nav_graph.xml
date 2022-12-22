@@ -41,7 +41,7 @@
         <argument
             android:name="model"
             android:defaultValue="@null"
-            app:argType="com.example.dz2_android_2.model.RecyclerModel"
+            app:argType="com.example.dz2_android_2.ui.model.RecyclerModel"
             app:nullable="true" />
         <argument
             android:name="isUpdate"
@@ -57,4 +57,9 @@
             android:id="@+id/action_signUpFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.dz2_android_2.ui.fragments.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>
